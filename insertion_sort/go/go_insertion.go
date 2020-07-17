@@ -13,29 +13,17 @@ func get_sort(sort_ar []int , ar_size int) {
 	start :=  time.Now()
 
 	for n:=1; n<ar_size; n++ {
-
-		
-		j := n		 
-		
-
+		j := n
 		for  j > 0 {
 			if sort_ar[j] < sort_ar[j-1] {
 
 				sort_ar[j], sort_ar[j-1] = sort_ar[j-1], sort_ar[j]
-					
-					
 			}
-				
 			j = j -1
 	           }
-
-
-
-		
-
 		}
 	duration := time.Since(start)
-	
+
 	fmt.Println(sort_ar)
 	fmt.Printf("\n\n ------------ Execution Time ---> %v \n", duration)
 	}
